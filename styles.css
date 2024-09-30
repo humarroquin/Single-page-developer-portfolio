@@ -67,6 +67,38 @@ h6 {
 }
 
 /* reusable styles */
+.d-flex {
+  display: flex;
+}
+
+/* headings */
+.heading_xl {
+  font-size: var(--fs-heading_l);
+  font-weight: var(--fw-700);
+  line-height: 88%;
+}
+
+/* buttons */
+.btn {
+  border: none;
+  color: inherit;
+  background: transparent;
+
+  font-size: var(--fw-700);
+  font-size: 1rem;
+  text-transform: uppercase;
+
+  border-bottom: 2px solid var(--clr-green);
+  padding-bottom: 10px;
+
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+}
+
+.btn:hover,
+.btn:active {
+  color: var(--clr-green);
+}
 
 /* containers */
 .container {
@@ -81,4 +113,38 @@ h6 {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  color: var(--clr-white);
+  font-family: var(--ff-body);
+  font-size: 1.125rem;
+  background-color: var(--clr-black);
+}
+
+/* header */
+.header {
+  margin-top: 2.4375rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__main-logo {
+  font-weight: var(--fw-700);
+  font-size: 2rem;
+  letter-spacing: -0.44px;
+}
+
+.header__logos {
+  gap: 2rem;
+}
+
+/* hero */
+.hero {
+  padding-block: 127px 323px;
+}
+
+.hero__heading {
+  max-width: 14ch;
+}
+
+.hero__sub-heading {
+  max-width: 39ch;
 }
