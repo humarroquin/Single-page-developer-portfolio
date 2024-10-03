@@ -71,11 +71,27 @@ h6 {
   display: flex;
 }
 
+.undelined-text {
+  position: relative;
+  white-space: nowrap;
+}
+
+.undelined-text::after {
+  content: '';
+  height: 6px;
+  width: 100%;
+  background-color: var(--clr-green);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 /* headings */
-.heading_xl {
-  font-size: var(--fs-heading_l);
+.heading_l {
+  font-family: var(--ff-headings);
+  font-size: var(--fs-heading_xl);
   font-weight: var(--fw-700);
-  line-height: 88%;
+  line-height: 88px;
 }
 
 /* buttons */
@@ -84,8 +100,8 @@ h6 {
   color: inherit;
   background: transparent;
 
-  font-size: var(--fw-700);
   font-size: 1rem;
+  font-weight: var(--fw-700);
   text-transform: uppercase;
 
   border-bottom: 2px solid var(--clr-green);
@@ -143,8 +159,10 @@ body {
 
 .hero__heading {
   max-width: 14ch;
+  margin-bottom: 43px;
 }
 
 .hero__sub-heading {
   max-width: 39ch;
+  margin-bottom: 66px;
 }
