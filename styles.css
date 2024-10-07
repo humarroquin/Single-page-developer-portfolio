@@ -101,6 +101,13 @@ h6 {
   line-height: 56px;
 }
 
+.heading_m {
+  font-family: var(--ff-headings);
+  font-size: var(--fs-heading_m);
+  font-weight: var(--fw-700);
+  line-height: 32px;
+}
+
 /* buttons */
 .btn {
   border: none;
@@ -138,7 +145,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: var(--clr-white);
   font-family: var(--ff-body);
-  font-size: 1.125rem;
+  font-size: var(--fs-paragraph);
   background-color: var(--clr-black);
 }
 
@@ -190,4 +197,96 @@ body {
 
 .experience__title {
   margin-bottom: 14px;
+}
+
+/* projects */
+.projects__header {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 69px 30px;
+}
+
+.project__titles,
+.tags {
+  text-transform: uppercase;
+}
+
+.project__titles {
+  margin-block: 20px 7px;
+}
+
+.tags {
+  font-size: var(--fs-paragraph);
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.img-wrapper::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.2s ease-in;
+}
+
+.img-wrapper:hover::after {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+.links-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.project__links {
+  font-style: 1rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in, color 0.3s ease-in;
+}
+
+.img-wrapper:hover .project__links {
+  opacity: 1;
+}
+
+.project__links:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+.project__links::after {
+  content: '';
+  background-color: var(--clr-green);
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 2.2rem;
+  left: 0;
+}
+
+.project__links:hover {
+  color: var(--clr-green);
 }
