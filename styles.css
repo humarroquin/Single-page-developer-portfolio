@@ -86,6 +86,16 @@ h6 {
   left: 0;
 }
 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* headings */
 .heading_xl {
   font-family: var(--ff-headings);
@@ -200,6 +210,10 @@ body {
 }
 
 /* projects */
+.projects {
+  padding-bottom: 139px;
+}
+
 .projects__header {
   justify-content: space-between;
   align-items: center;
@@ -289,4 +303,23 @@ body {
 
 .project__links:hover {
   color: var(--clr-green);
+}
+
+/* contact */
+.contact {
+  background-color: var(--clr-dark_gray);
+  padding-block: 84px 92px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact__description {
+  max-width: 445px;
+}
+
+.contact__heading {
+  margin-bottom: 36px;
 }
