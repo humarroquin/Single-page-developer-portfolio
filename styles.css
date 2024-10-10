@@ -147,6 +147,13 @@ h6 {
   color: var(--clr-green);
 }
 
+.btn {
+  background: transparent;
+  border: none;
+  justify-self: end;
+  cursor: pointer;
+}
+
 /* containers */
 .container {
   --max-width: 70rem;
@@ -309,4 +316,28 @@ body {
 
 .contact__heading {
   margin-bottom: 36px;
+}
+
+input,
+textarea {
+  background-color: var(--clr-dark_gray);
+  border: none;
+  border-bottom: 1px solid var(--clr-light_gray);
+  padding: 16px 0 16px 24px;
+  color: var(--clr-white);
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+form {
+  display: grid;
+  gap: 32px;
+}
+
+::placeholder {
+  color: var(--clr-light_gray);
+  text-transform: uppercase;
 }
