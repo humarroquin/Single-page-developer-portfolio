@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img,
 picture,
 video,
@@ -118,25 +122,28 @@ h6 {
   line-height: 32px;
 }
 
-/* buttons */
-.btn {
-  border: none;
+/* links */
+.page__links {
+  font-style: 1rem;
+  text-decoration: none;
   color: inherit;
-  background: transparent;
-
-  font-size: 1rem;
   font-weight: var(--fw-700);
   text-transform: uppercase;
-
-  border-bottom: 2px solid var(--clr-green);
-  padding-bottom: 10px;
-
-  cursor: pointer;
+  position: relative;
   transition: color 0.3s ease-in;
 }
 
-.btn:hover,
-.btn:active {
+.page__links::after {
+  content: '';
+  background-color: var(--clr-green);
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 2.2rem;
+  left: 0;
+}
+
+.page__links:hover {
   color: var(--clr-green);
 }
 
@@ -269,12 +276,6 @@ body {
 }
 
 .project__links {
-  font-style: 1rem;
-  text-decoration: none;
-  color: inherit;
-  font-weight: var(--fw-700);
-  text-transform: uppercase;
-
   display: block;
   width: fit-content;
   margin-inline: auto;
@@ -289,20 +290,6 @@ body {
 
 .project__links:not(:last-child) {
   margin-bottom: 48px;
-}
-
-.project__links::after {
-  content: '';
-  background-color: var(--clr-green);
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  top: 2.2rem;
-  left: 0;
-}
-
-.project__links:hover {
-  color: var(--clr-green);
 }
 
 /* contact */
